@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Dashboard">
+  <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+  <title>bvci</title>
+  <link rel="shortcut icon" href="{% static 'actual/img/logo.png' %}">
+
+  <!-- Favicons -->
+    <link href="{% static 'css/style1.css'%}" rel="stylesheet">
+    <link href="{% static 'css/style-responsive.css'%}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.css'%}" rel="stylesheet" />
+  <!-- Bootstrap core CSS -->
+      <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!--external css-->
+  <!-- Custom styles for this template -->
+  
+  <!-- =======================================================
+    Template Name: Dashio
+    Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
+    Author: TemplateMag.com
+    License: https://templatemag.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+  <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+  <div id="login-page">
+    <div class="container">
+    <div style="text-align: center;">
+        {% for message in messages %}
+            <h4  id="messages" style="color: red;">{{message}}</h4>
+        {% endfor %}
+    </div>
+    
+    <form class="form-login" action="" method="POST">
+        {% csrf_token %}
+
+        <h2 class="form-login-heading"  style="background-color: green;">CONNECTION</h2>
+        <div class="login-wrap">
+          <input type="text" class="form-control" name="username" placeholder="Username" autofocus>
+          <br>
+          <input type="password" name="password" class="form-control" placeholder="Password">
+          <br>
+          <button class="btn btn-theme btn-block" type="submit" value="Login" style="background-color: green;"><i class="fa fa-lock"></i>
+             SE CONNECTER</button>
+          <hr>
+          <div class="login-social-link centered">
+            <p></p>
+          </div>
+          
+        </div>
+        <!-- Modal --
+        <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Forgot Password ?</h4>
+              </div>
+              <div class="modal-body">
+                <p>Enter your e-mail address below to reset your password.</p>
+                <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+              </div>
+              <div class="modal-footer">
+                <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
+                <button class="btn btn-theme" type="button">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- modal -->
+      </form>
+    </div>
+    
+    <div class="" style="text-align: center;">
+        <a class="" href="{% url 'registerPage'%}">
+          je m'inscris
+          </a>
+      </div>
+  </div>
+  <br>
+  <!-- js placed at the end of the document so the pages load faster -->
+  {% block footer %}
+        {% include "layouts/footer.html" %}
+    {% endblock footer %}
+    
+    {% block js %}
+        <!-- jQuery -->
+        <script src="{% static 'js/jquery.js' %}"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+        <script type="text/javascript" src="{% static 'js/jquery.backstretch.min.js'%}"></script>
+        <script>
+            $.backstretch( "{% static 'img/bg.jpg' %}" , {
+            speed: 500
+            });
+        </script>
+    {% endblock js %}
+</body>
+
+</html>

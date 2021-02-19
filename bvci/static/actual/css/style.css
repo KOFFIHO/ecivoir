@@ -1,0 +1,180 @@
+/*!
+ * Start Bootstrap - Business Casual (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+
+ .container .row  li{
+    list-style-type: none;
+    font-size: large;
+    color: rgb(255, 255, 255);
+ }
+
+ .container .row .col-sm-2 .js_nav-item:hover{
+    background: rgba(255, 255, 255, 0.7); 
+ }
+
+ .container .row  li a{
+    color: aliceblue;
+}
+
+hr {
+    max-width: 400px;
+    border-color: #999999;
+}
+
+
+.intro-text {
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+
+
+
+footer {
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+}
+
+footer p {
+    margin: 0;
+    padding: 50px 0;
+}
+
+@media screen and (min-width:768px) {
+    .brand {
+        display: inherit;
+        margin: 0;
+        padding: 30px 0 10px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 5em;
+        font-weight: 700;
+        line-height: normal;
+        color: #fff;
+    }
+
+    .top-divider {
+        margin-top: 0;
+    }
+
+    .img-left {
+        float: left;
+        margin-right: 25px;
+    }
+
+    .address-bar {
+        display: inherit;
+        margin: 0;
+        padding: 0 0 40px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        text-transform: uppercase;
+        font-size: 1.25em;
+        font-weight: 400;
+        letter-spacing: 3px;
+        color: #fff;
+    }
+
+    .navbar {
+        border-radius: 0;
+    }
+
+    .navbar-header {
+        display: none;
+    }
+
+    .navbar {
+        min-height: 0;
+    }
+
+    .navbar-default {
+        border: none;
+        
+        background: rgba(255,255,255,0.1);
+    }
+
+    .nav>li>a {
+        padding: 35px;
+    }
+
+    .navbar-nav>li>a {
+        line-height: normal;
+    }
+
+    .navbar-nav {
+        display: table;
+        float: none;
+        margin: 0 auto;
+        table-layout: fixed;
+        font-size: 1.25em;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .box:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #main-menu.navbar-default {
+      background: rgba(255, 255, 255, 1);
+      -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+    }
+    
+    #main-menu.navbar-default .navbar-nav > li > a {
+      padding-top: 20px;
+      padding-bottom: 20px; font-size:16px;font-family: 'Roboto-regular'; font-weight:normal;
+    }
+    #main-menu.navbar-default .navbar-nav > li.active > a,
+    #main-menu.navbar-default .navbar-nav > li.open > a,
+    #main-menu.navbar-default .navbar-nav > li:hover > a {
+      background: transparent;
+      border-top: 0px solid #ff6c00; color:#ff6c00;
+    }
+    #main-menu.navbar-default .dropdown-menu {
+      padding: 0 20px;
+      min-width: 220px;
+      background-color: rgba(26, 28, 40, 0.9);
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      background-clip: inherit;
+    }
+    #main-menu.navbar-default .dropdown-menu > li {
+      border-left: 3px solid transparent;
+      margin-left: -20px;
+      padding-left: 17px;
+      -webit-transition: border-color 400ms;
+      transition: border-color 400ms;
+    }
+    #main-menu.navbar-default .dropdown-menu > li > a {
+      border-top: 1px solid #404455;
+      padding: 15px 0;
+      color: #eeeeee;
+    }
+    #main-menu.navbar-default .dropdown-menu > li:first-child > a {
+      border-top: 0;
+    }
+    #main-menu.navbar-default .dropdown-menu > li.active,
+    #main-menu.navbar-default .dropdown-menu > li.open,
+    #main-menu.navbar-default .dropdown-menu > li:hover {
+      border-left-color: #45aed6;
+    }
+    #main-menu.navbar-default .dropdown-menu > li.active > a,
+    #main-menu.navbar-default .dropdown-menu > li.open > a,
+    #main-menu.navbar-default .dropdown-menu > li:hover > a {
+      color: #45aed6;
+      background-color: transparent;
+    }
+  }

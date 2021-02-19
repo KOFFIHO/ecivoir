@@ -1,0 +1,21 @@
+form
+{
+    background-color:rgb(250, 214, 117);
+    margin-left: 22%;
+    margin-right: 40%;
+    
+}
+form label
+{
+    font-size: 1.2em;
+}
+input
+{
+    font-size: 1.5em;
+    position: relative;
+    text-align: center;  
+}
+.dropdown-menu
+{
+    background-color: aliceblue;
+}

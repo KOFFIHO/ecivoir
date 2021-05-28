@@ -1,132 +1,91 @@
 {% extends "layouts/base.html" %}
 
 {% load static %}
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
-{% block head %}
-<head>
+    {% block head %}
+    <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>cours|bvci</title>
+        <link rel="shortcut icon" href="{% static 'actual/img/logo.png' %}">
 
-    <title>bvci</title>
-    <link rel="shortcut icon" href="{% static 'actual/img/logo.png' %}">
+        <!-- Bootstrap Core CSS -->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <!--<link href="{% static 'css/form.css' %}" rel="stylesheet">-->
 
-    <link href="{% static 'css/form.css' %}" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="{% static 'css/business-casual.css' %}" rel="stylesheet">
+        <link href="{% static 'css/form.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/menu_deroul.css' %}">
 
-    <!-- Custom CSS -->
-    <link href="{% static 'css/business-casual.css' %}" rel="stylesheet">
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <link rel="stylesheet" href="{% static 'css/menu_deroul.css' %}">
-</head>
-{% endblock head %}
+    </head>
+    {% endblock head %}
+      
+    {% block body %}
+    <body>
+        {% include "layouts/navbarhome.html" %}
 
+        <div class="brand">{{matiere.nommatiere}}</div>
 
- {% block body %}
- <body>
-
-    {% include "layouts/navbarhome.html" %}
-    
-    <div class="brand"> {{niveau.nomniveau}}  </div>
-
-    <!-- Navigation -->
-             
-        
-        <!--MENU DE NAVIGATION-->
         <div class="container">
-        <br>
 
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <!--<h2 class="intro-text text-center">ensemble ameliorons le systeme éducatif Ivoirien.<br>
-                        <br>
-                        <strong> <h1 class="level-item" style="text-align-last: center;"> <strong >LA FACULTE</strong></h1></strong>
-                        <br>-->
-
-                            <div class="title is-4">
-                                <h2 class="sn"> LES MATIERES </h2>
-                            </div>
-                            <section class="section gb nopadtop">
-                                <div class="container">
-                                    <div class="row event-boxes">
-                                        {% for c in matiere %}
-                                        <div class="col-md-3">
-                                            <div class="box m30">
-                                                <div class="event-desc">                                                
-                                                    <p> 
-                                                        <form class="">
-                                                            <div class="row">
-                                                                <div class="col-xs-4">
-                                                                    <div class="input-group">
-                                                                        <div class="input-group-btn">
-                                                                            <button tabindex="-1" class="btn btn-success" type="button" style="color: black; border-radius: 10px; letter-spacing: 4px; font-size: 20px;">{{c.nommatiere}} </button>
-                                                                            <button tabindex="-1" data-toggle="dropdown" class="btn btn-success dropdown-toggle" type="button" style="color: black; border-radius: 10px;">
-                                                                                <span class="caret"></span>
-                                                                                <span class="sr-only">Toggle Dropdown</span>
-                                                                            </button>
-                                                                            <ul class="dropdown-menu">
-                                                                                <li><a href="{% url 'cour' c.id %}" style="font-size: 20px;">VOIR LES COURS</a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </form>
-                                                        <br>                                            
-                                                </div>
-                                            </div>
-                                        </div><!-- end col -->
-                                        {% endfor %}
-                                    </div><!-- end row -->
-                                </div><!-- end container -->
-                            </section>
-                            <br>
+            <div class="row">
+                <div class="box">
+                    <div class="col-lg-12">
+                        <h2 class="intro-text text-center">
+                            <strong class="sn" style="font-size: 2em;">LES MATIERES</strong>
+                        </h2>
+                        <hr>
+                    </div>
+                    {% for c in matiere %}
+                    <div class="btn-group">
+                        <button ></button>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <button class="btn btn-success"  >
+                            <a href="{% url 'cour' c.id %}" style="color:white;"> 
+                                {{c.nommatiere}}
+                            </a>
+                        </button>
+                    </div>
+                    {% endfor %}
+                    
+                    <div class="clearfix"></div>
                 </div>
             </div>
         </div>
+        <!-- /.container -->
+        
+        {% include "layouts/footer.html" %}
+        
+        {% block js %}
 
-                                 
-                  
-    <br>
-    <br>
-
-    {% include "layouts/footer.html" %}
-
-    {% block js %}
-    <!-- jQuery -->
-    <script src="{% static 'js/jquery.js' %}"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-
-    <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
-    {% endblock js %}
-
+        <script src="{% static 'js/jquery.js' %}"></script>
+    
+        <!-- Bootstrap Core JavaScript -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    
+        {% endblock js %}
+    
     </body>
     {% endblock body %}
+
 </html>
